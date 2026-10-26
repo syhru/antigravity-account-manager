@@ -655,6 +655,7 @@ export default function Home() {
       </main>
       <footer className="page-footer">
         <span>Antigravity Account Manager</span>
+        <center><span>© 2026 Syahru</span></center>
         <span>Ruang kerja lokal Anda.</span>
       </footer>
       {activityOpen && <ActivityLog onClose={() => setActivityOpen(false)} />}
