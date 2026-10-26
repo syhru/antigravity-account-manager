@@ -1,0 +1,35 @@
+{
+  "name": "antigravity-account-manager",
+  "services": {
+    "postgres": {
+      "image": "postgres:18",
+      "container_name": "postgresql-antigravity-account-manager",
+      "restart": "unless-stopped",
+      "environment": {
+        "POSTGRES_DB": "antigravity_account_manager",
+        "POSTGRES_USER": "antigravity",
+        "POSTGRES_PASSWORD": "${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env.local}"
+      },
+      "ports": [
+        "127.0.0.1:55432:5432"
+      ],
+      "volumes": [
+        "postgres_data:/var/lib/postgresql"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD-SHELL",
+          "pg_isready -U antigravity -d antigravity_account_manager"
+        ],
+        "interval": "5s",
+        "timeout": "5s",
+        "retries": 12
+      }
+    }
+  },
+  "volumes": {
+    "postgres_data": {
+      "name": "antigravity-account-manager-postgres-data"
+    }
+  }
+}
