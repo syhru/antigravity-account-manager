@@ -2,7 +2,6 @@
 
 Dashboard lokal untuk mengelola beberapa akun Google pada Antigravity CLI melalui [agy-auth](https://github.com/fikrilal/agy-auth). Tambahkan akun melalui OAuth, pantau kuota, ganti akun, dan lihat log aktivitas dari satu antarmuka web.
 
-> Aplikasi ini merupakan integrasi tidak resmi. Bukan produk resmi Google. Dirancang untuk penggunaan lokal oleh satu pengguna, bukan layanan publik atau deployment Vercel.
 
 ## Fitur
 
